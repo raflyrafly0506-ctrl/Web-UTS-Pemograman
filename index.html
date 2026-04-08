@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodi Nusantara - Event Organizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Melodi Nusantara</h1>
+        <nav>
+            <ul>
+                <li><a href="#layanan">Layanan</a></li>
+                <li><a href="#pendaftaran">Pendaftaran</a></li>
+                <li><a href="#daftar-artis">Daftar Artis</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="layanan">
+            <h2>Layanan Kami</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Manajemen Panggung</h3>
+                    <p>Pengaturan panggung profesional dan tata suara berkualitas tinggi.</p>
+                </div>
+                <div class="card">
+                    <h3>Pemesanan Artis</h3>
+                    <p>Menghubungkan Anda dengan musisi papan atas nasional maupun internasional.</p>
+                </div>
+                <div class="card">
+                    <h3>Promosi Acara</h3>
+                    <p>Kampanye pemasaran digital dan luring secara menyeluruh.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pendaftaran">
+            <h2>Pendaftaran Peserta Acara</h2>
+            <form id="formPendaftaran">
+                <div class="form-group">
+                    <label>Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" placeholder="Contoh: Budi Santoso" required>
+                    <span class="error" id="namaError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Alamat Email:</label>
+                    <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
+                    <span class="error" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Jumlah Tiket:</label>
+                    <input type="number" id="tiket" name="tiket" placeholder="Minimal 1" required>
+                    <span class="error" id="tiketError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Kategori Tiket:</label>
+                    <select id="kategori">
+                        <option value="reguler">Reguler</option>
+                        <option value="vip">VIP</option>
+                        <option value="vvip">VVIP</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Metode Pembayaran:</label><br>
+                    <input type="radio" name="pembayaran" value="transfer" checked> Transfer Bank
+                    <input type="radio" name="pembayaran" value="ewallet"> Dompet Digital
+                </div>
+
+                <button type="submit">Kirim Pendaftaran</button>
+            </form>
+        </section>
+
+        <section id="daftar-artis">
+            <h2>Daftar Artis Utama</h2>
+            <div class="controls">
+                <input type="text" id="inputArtisBaru" placeholder="Masukkan Nama Artis">
+                <button onclick="tambahArtis()">Tambah Artis</button>
+            </div>
+            <ul id="listArtis">
+                </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Melodi Nusantara.UTS Muhammad abdul raply.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
